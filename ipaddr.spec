@@ -4,7 +4,7 @@
 #
 Name     : ipaddr
 Version  : 2.1.11
-Release  : 12
+Release  : 13
 URL      : https://pypi.python.org/packages/source/i/ipaddr/ipaddr-2.1.11.tar.gz
 Source0  : https://pypi.python.org/packages/source/i/ipaddr/ipaddr-2.1.11.tar.gz
 Summary  : UNKNOWN
