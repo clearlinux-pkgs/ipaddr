@@ -4,12 +4,13 @@
 #
 Name     : ipaddr
 Version  : 2.1.11
-Release  : 18
+Release  : 19
 URL      : http://pypi.debian.net/ipaddr/ipaddr-2.1.11.tar.gz
 Source0  : http://pypi.debian.net/ipaddr/ipaddr-2.1.11.tar.gz
 Summary  : UNKNOWN
 Group    : Development/Tools
 License  : Apache-2.0
+Requires: ipaddr-legacypython
 Requires: ipaddr-python
 BuildRequires : pbr
 BuildRequires : pip
@@ -22,9 +23,18 @@ Patch1: 0001-Fix-compatibility-with-python-3.patch
 ipaddr.py is a library for working with IP addresses, both IPv4 and IPv6.
 It was developed by Google for internal use, and is now open source.
 
+%package legacypython
+Summary: legacypython components for the ipaddr package.
+Group: Default
+
+%description legacypython
+legacypython components for the ipaddr package.
+
+
 %package python
 Summary: python components for the ipaddr package.
 Group: Default
+Requires: ipaddr-legacypython
 
 %description python
 python components for the ipaddr package.
@@ -39,7 +49,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1504311562
+export SOURCE_DATE_EPOCH=1505004013
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -49,7 +59,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python ipaddr_test.py
 %install
-export SOURCE_DATE_EPOCH=1504311562
+export SOURCE_DATE_EPOCH=1505004013
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -60,7 +70,10 @@ echo ----[ mark ]----
 %files
 %defattr(-,root,root,-)
 
-%files python
+%files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files python
+%defattr(-,root,root,-)
 /usr/lib/python3*/*
