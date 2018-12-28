@@ -4,7 +4,7 @@
 #
 Name     : ipaddr
 Version  : 2.2.0
-Release  : 33
+Release  : 34
 URL      : http://pypi.debian.net/ipaddr/ipaddr-2.2.0.tar.gz
 Source0  : http://pypi.debian.net/ipaddr/ipaddr-2.2.0.tar.gz
 Summary  : Google's IP address manipulation library
