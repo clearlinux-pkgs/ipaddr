@@ -4,7 +4,7 @@
 #
 Name     : ipaddr
 Version  : 2.2.0
-Release  : 40
+Release  : 41
 URL      : http://pypi.debian.net/ipaddr/ipaddr-2.2.0.tar.gz
 Source0  : http://pypi.debian.net/ipaddr/ipaddr-2.2.0.tar.gz
 Summary  : Google's IP address manipulation library
@@ -16,9 +16,8 @@ Requires: ipaddr-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 
 %description
-ipaddr.py is a library for working with IP addresses, both IPv4 and IPv6.
 It has been superseded by ipaddress from the Python 3 standard library, and its
-Python 2 backport.
+        Python 2 backport.
 
 %package license
 Summary: license components for the ipaddr package.
@@ -56,12 +55,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583158723
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1603393351
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
