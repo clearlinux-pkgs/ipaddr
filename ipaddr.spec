@@ -4,7 +4,7 @@
 #
 Name     : ipaddr
 Version  : 2.2.0
-Release  : 52
+Release  : 53
 URL      : http://pypi.debian.net/ipaddr/ipaddr-2.2.0.tar.gz
 Source0  : http://pypi.debian.net/ipaddr/ipaddr-2.2.0.tar.gz
 Summary  : Google's IP address manipulation library
@@ -55,7 +55,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1603393351
+export SOURCE_DATE_EPOCH=1635742172
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
